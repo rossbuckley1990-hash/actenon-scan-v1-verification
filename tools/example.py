@@ -21,3 +21,9 @@ def risky_delete(path: str) -> None:
 def authorize(path: str) -> None:
     if not path.startswith("/tmp/"):
         raise PermissionError(path)
+// trigger PR
+
+# New unguarded sink added in PR
+@tool
+def new_unguarded(cmd: str) -> str:
+    return subprocess.run(cmd, shell=True, capture_output=True).stdout.decode()
