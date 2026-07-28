@@ -26,3 +26,8 @@ def authorize(path: str) -> None:
 @tool
 def new_v131_unguarded(cmd: str) -> str:
     return subprocess.run(cmd, shell=True, capture_output=True).stdout.decode()
+
+# Second push — another unguarded sink
+@tool
+def second_push_unguarded(cmd: str) -> str:
+    return subprocess.run(cmd, shell=True, capture_output=True).stdout.decode()
