@@ -1,0 +1,3 @@
+{
+  "guard_patterns": ["authorize", "authorizeBool", "isAuthorized"]
+}
