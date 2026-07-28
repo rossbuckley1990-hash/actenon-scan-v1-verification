@@ -21,3 +21,4 @@ def risky_delete(path: str) -> None:
 def authorize(path: str) -> None:
     if not path.startswith("/tmp/"):
         raise PermissionError(path)
+// trigger PR
