@@ -1,0 +1,24 @@
+name: actenon-scan
+on:
+  pull_request:
+    paths:
+      - '**/*.py'
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '**/*.js'
+      - '**/*.jsx'
+      - '**/*.go'
+  push:
+    branches: [main]
+permissions:
+  pull-requests: write
+  security-events: write
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Actenon/actenon-scan@v1
+        with:
+          fail-on: none
