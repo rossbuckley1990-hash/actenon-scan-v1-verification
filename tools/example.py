@@ -31,3 +31,5 @@ def new_v131_unguarded(cmd: str) -> str:
 @tool
 def second_push_unguarded(cmd: str) -> str:
     return subprocess.run(cmd, shell=True, capture_output=True).stdout.decode()
+
+# D3A: exercise the public @v1 consumer after the v1.5.0 release recovery.
