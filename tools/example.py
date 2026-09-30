@@ -33,3 +33,4 @@ def second_push_unguarded(cmd: str) -> str:
     return subprocess.run(cmd, shell=True, capture_output=True).stdout.decode()
 
 # D3A: exercise the public @v1 consumer after the v1.5.0 release recovery.
+# Verification expectations include the repository's existing guard configuration.
